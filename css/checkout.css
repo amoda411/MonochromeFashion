@@ -1,0 +1,161 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 160px; /* Adjust this value to offset the navbar height */
+    background-color: #000000;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #ffffff;
+}
+
+.login-button {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #63666a;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #787976;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #000000;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #000000;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link:active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+/* Form Container */
+.form-container-checkout {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.form-container-checkout form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 52%;
+    backdrop-filter: blur(15px);
+    border: #ffffff;
+}
+
+.form-container-checkout h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.form-container-checkout form input,
+.form-container-checkout form select {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+    margin: 8px 0;
+    background: #eee;
+    border-radius: 15px;
+}
+
+.form-container-checkout form select option {
+    background: #ffffff;
+}
+
+.form-container-checkout form .form-btn {
+    background: #333;
+    color: #000000;
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #ffffff;
+}
+
+.form-container-checkout form .form-btn:hover {
+    background: #787976;
+    color: #000000;
+}
+
+.form-container-checkout form p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.form-container-checkout form a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-container-checkout form .error-msg {
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 15px;
+}
+
